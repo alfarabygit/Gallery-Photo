@@ -89,18 +89,18 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .grid {
     width: calc(100% - 40px);
     columns: 3;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .grid {
     columns: 2;
   }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .grid {
     columns: 1;
   }
