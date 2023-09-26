@@ -25,6 +25,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
@@ -91,18 +92,11 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .item-links {
-    width: 100%;
-  }
   .grid {
     columns: 2;
   }
 }
 @media screen and (max-width: 480px) {
-  .item-links {
-    justify-content: space-between;
-    gap: 0;
-  }
   .grid {
     columns: 1;
   }
