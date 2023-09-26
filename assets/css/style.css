@@ -6,55 +6,9 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* .title {
-  text-align: center;
-  padding: 1.3rem;
-  font-size: 2.5rem;
-  color: #fff;
-  animation: Color 4s linear infinite;
-  -webkit-animation: Color 4s ease-in-out infinite;
+body {
+  background-color: #eee5e5;
 }
-
-.grid {
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 70px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 250px;
-  grid-auto-flow: dense;
-  gap: 30px;
-}
-
-.grid-item {
-  width: 100%;
-  background-color: #fafafa;
-  border-radius: 15px;
-}
-
-.grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-
-.grid-item:nth-child(2n + 3) {
-  grid-row: span 2;
-}
-
-.grid-item img:hover {
-  transform: scale(1.1);
-}
-
-@media screen and (max-width: 576px) {
-  .grid-item {
-    grid-row: span 2;
-  }
-} */
 
 .title {
   text-align: center;
@@ -63,6 +17,31 @@
   color: #fff;
   animation: Color 4s linear infinite;
   -webkit-animation: Color 4s ease-in-out infinite;
+}
+
+.item-links {
+  width: 60%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.item-link {
+  border: 2px solid #46a0db;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #46a0db;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: 0.5s ease;
+}
+
+.item-link:hover {
+  background: #46a0db;
+  color: #fff;
 }
 
 .grid {
@@ -83,10 +62,26 @@
   border-radius: 15px;
   cursor: pointer;
   transition: 0.5s ease;
+  animation: scaleAnimation 0.5s ease;
 }
 
 .grid-item img:hover {
   transform: scale(1.1);
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Active menu*/
+.menu-active {
+  background-color: #46a0db;
+  color: #fff;
 }
 
 @media screen and (max-width: 1200px) {
@@ -96,11 +91,18 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .item-links {
+    width: 100%;
+  }
   .grid {
     columns: 2;
   }
 }
 @media screen and (max-width: 480px) {
+  .item-links {
+    justify-content: space-between;
+    gap: 0;
+  }
   .grid {
     columns: 1;
   }
