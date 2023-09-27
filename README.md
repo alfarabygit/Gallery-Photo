@@ -1,2 +1,2 @@
 # Gallery-Photo
-Galeri photo pinterest sederhana dgn html,css dan library js(AOS, Fancybox).
+Galeri photo pinterest sederhana dgn html,css javascript dan library js(AOS, Fancybox).
